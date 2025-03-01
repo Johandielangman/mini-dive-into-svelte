@@ -5,7 +5,7 @@ frontend:
             commands:
                 - 'nvm use 18.19.0 || nvm install 18.19.0'
                 - 'npm ci'
-                - 'npx ampx generate outputs --out-dir ./src/lib/'
+                - 'npx ampx generate outputs --branch main --app-id $AWS_APP_ID --out-dir ./src/lib/'
         build:
             commands:
                 - 'npm run build'
