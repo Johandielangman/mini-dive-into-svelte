@@ -1,4 +1,6 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
+import { sayHello } from '../functions/resources';
+
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -7,10 +9,15 @@ specifies that any unauthenticated user can "create", "read", "update",
 and "delete" any "Todo" records.
 =========================================================================*/
 const schema = a.schema({
-  Todo: a
-    .model({
-      content: a.string(),
+  sayHello: a
+    .query()
+    .arguments({
+      name: a.string(),
     })
+    .returns(
+      a.json()  // This will allow a flexible return type, returning the object as a JSON response
+    )
+    .handler(a.handler.function(sayHello))
     .authorization((allow) => [allow.guest()]),
 });
 

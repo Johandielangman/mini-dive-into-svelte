@@ -39,6 +39,7 @@
 		"vite": "^6.2.0"
 	},
 	"dependencies": {
+		"@types/node": "^22.13.8",
 		"amplify-adapter": "^0.2.0",
 		"aws-amplify": "^6.13.2"
 	},
