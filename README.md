@@ -4,7 +4,7 @@ https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
 
- npx ampx generate outputs --app-id dfpqu1idsmvmr --branch arn:aws:amplify:us-east-1:303156412026:apps/dfpqu1idsmvmr/branches/main  --format json --out-dir ./src/lib/ --outputs-version 1.3
+ npx ampx generate --app-id dfpqu1idsmvmr --branch main outputs --format json --out-dir ./src/lib/ --outputs-version 1.3
 
 ## Creating a project
 
