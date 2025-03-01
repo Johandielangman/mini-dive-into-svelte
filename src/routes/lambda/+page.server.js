@@ -1,17 +1,9 @@
-import { generateClient } from "aws-amplify/api"
-import { Amplify } from "aws-amplify"
-import outputs from "$lib/amplify_outputs.json"
+import { fetchLambdaQuery } from "$lib/amplify-utils";
 
-Amplify.configure(outputs)
 
 export async function load() {
-    const client = generateClient()
-    const response = await client.queries.sayHello({
-        name: "Amplify",
-    })
-    let parsedResponse = JSON.parse(response.data)
-    parsedResponse.body = JSON.parse(parsedResponse.body)
+    // Return the Promise directly from fetchQuery
     return {
-        parsedResponse
-    }
+        sayHi: fetchLambdaQuery("sayHi", { name: "Amplify" })
+    };
 }

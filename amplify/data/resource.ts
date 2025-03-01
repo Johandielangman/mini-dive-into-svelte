@@ -1,5 +1,5 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
-import { sayHello } from '../functions/resources';
+import { sayHi } from '../functions/resources';
 
 
 /*== STEP 1 ===============================================================
@@ -9,15 +9,15 @@ specifies that any unauthenticated user can "create", "read", "update",
 and "delete" any "Todo" records.
 =========================================================================*/
 const schema = a.schema({
-  sayHello: a
+  sayHi: a
     .query()
     .arguments({
       name: a.string(),
     })
+    .handler(a.handler.function(sayHi))
     .returns(
       a.json()  // This will allow a flexible return type, returning the object as a JSON response
     )
-    .handler(a.handler.function(sayHello))
     .authorization((allow) => [allow.guest()]),
 });
 

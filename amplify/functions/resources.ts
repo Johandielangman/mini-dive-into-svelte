@@ -7,8 +7,8 @@ import { Code, Function, Runtime } from "aws-cdk-lib/aws-lambda";
 
 const functionDir = path.dirname(fileURLToPath(import.meta.url));
 
-export const sayHello = defineFunction((scope) => {
-  const functionName = "say-hello"; // Scoped within defineFunction
+export const sayHi = defineFunction((scope) => {
+  const functionName = "say-hi"; // Scoped within defineFunction
 
   return new Function(scope, functionName, {
     handler: "index.handler",

@@ -8,6 +8,7 @@
 	<a href="/blog">blog</a>
 	<a href="/to-do">to-do</a>
 	<a href="/lambda">lambda</a>
+	<a href="/form">form</a>
 </nav>
 
 {@render children()}
