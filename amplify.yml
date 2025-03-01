@@ -5,6 +5,7 @@ frontend:
             commands:
                 - 'nvm use 18.19.0 || nvm install 18.19.0'
                 - 'npm ci'
+                - 'npx amplify export --out amplify_outputs.json'
         build:
             commands:
                 - 'npm run build'
@@ -17,4 +18,3 @@ frontend:
     cache:
         paths:
             - '.npm/**/*'
-            
