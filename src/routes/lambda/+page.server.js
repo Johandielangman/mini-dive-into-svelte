@@ -1,8 +1,8 @@
 import { generateClient } from "aws-amplify/api"
-// import { Amplify } from "aws-amplify"
-// import outputs from "$lib/amplify_outputs.json"
+import { Amplify } from "aws-amplify"
+import outputs from "$lib/amplify_outputs.json"
 
-// Amplify.configure(outputs)
+Amplify.configure(outputs)
 
 export async function load() {
     const client = generateClient()
