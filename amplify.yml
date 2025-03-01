@@ -5,7 +5,7 @@ frontend:
             commands:
                 - 'nvm use 18.19.0 || nvm install 18.19.0'
                 - 'npm ci'
-                - 'npx ampx export --out amplify_outputs.json'
+                - 'npx ampx generate outputs --out amplify_outputs.json'
         build:
             commands:
                 - 'npm run build'
