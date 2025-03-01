@@ -8,7 +8,7 @@ frontend:
                 - 'echo $AWS_BRANCH'
                 - 'echo $AWS_APP_ID'
                 - 'echo $AWS_BRANCH_ARN'
-                - 'npx ampx generate outputs --format json --out-dir ./src/lib/ --outputs-version 1.3'
+                - 'npx ampx generate outputs --format json --out-dir ./src/lib/ --outputs-version 1.3 --profile amplify'
         build:
             commands:
                 - 'npm run build'
