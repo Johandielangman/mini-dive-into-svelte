@@ -11,5 +11,3 @@ export function load({ cookies }) {
 		visited: visited === 'true'
 	};
 }
-
-export const prerender = true;
